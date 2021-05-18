@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for todo in todos.results %}
+    {{ todo.id }}  {{ todo.season }}  {{ todo.city }} {{ todo.date }} {{ todo.team1 }} {{ todo.team2 }} {{ todo.toss_winner }} {{ todo.toss_decision }} {{ todo.result }} {{ todo.dl_applied }} {{ todo.winner }} {{ todo.win_by_runs }} {{ todo.win_by_wickets }} {{ todo.player_of_match }} {{ todo.venue }} {{ todo.umpire1 }} {{ todo.umpire2 }} {{ todo.umpire3 }}<br>
+{% endfor %}
+<br><br>
+{{ todos }}
+</body>
+</html>

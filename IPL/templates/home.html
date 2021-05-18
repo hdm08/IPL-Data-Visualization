@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block active1 %}active{% endblock %}
+{% block body %}
+<div class="row" style="justify-content: center;">
+{% if chart %}
+    <img src="data:image/png;base64,{{ chart|safe }}" >
+{% endif %}
+</div>
+{% endblock %}

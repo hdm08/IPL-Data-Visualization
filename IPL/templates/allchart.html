@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    <h3 style="text-align: center;">Enter the Year</h3>
+    <form method="get">
+        <div class="row" style="justify-content: center;">
+            <select name="graph" class="form-control" id="id_graph" style="width: 10%;" >
+                <option selected>Select</option>
+
+                {% for y in year %}
+                    <option value="{{ y }}">{{ y }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit">
+        </div>
+    </form><br>
+    <div class="row" style="justify-content: center;">
+
+    {% if chart %}
+    <img src="data:image/png;base64,{{ chart|safe }}" class="rounded float-left">
+    {% endif %}
+    </div>
+{% endblock %}
